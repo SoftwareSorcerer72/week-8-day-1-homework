@@ -2446,9 +2446,42 @@
         {
             "language": "typescript",
             "source": [
-                "\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n"
+                "enum Category {\r\n    Shirts= \"Shirts\", \r\n    Shoes= \"Shoes\",\r\n    Pants= \"Pants\",\r\n    Hats= \"Hats\"\r\n}\r\n\r\ntype shopItem = {\r\n    numericId: number,\r\n    price: number,\r\n    description: string,\r\n    category: Category,\r\n    searchKeyWords: string[]\r\n}\r\n\r\n\r\n\r\nlet blackPantherTShirt: shopItem = {\r\n    numericId: 1,\r\n    price: 20.99,\r\n    description: 'Black Panther T-Shirt',\r\n    category: Category.Shirts,\r\n    searchKeyWords: ['Black Panther', 'T-Shirt', 'Marvel']\r\n};\r\n\r\n\r\nlet ironManHat: shopItem = {\r\n    numericId: 2,\r\n    price: 15.99,\r\n    description: 'Iron Man Hat',\r\n    category: Category.Hats,\r\n    searchKeyWords: ['Iron Man', 'Hat', 'Marvel']\r\n};\r\n\r\n\r\n\r\nlet cowboyBebopShoes: shopItem = {\r\n    numericId: 3,\r\n    price: 50.99,\r\n    description: 'Cowboy Bebop Shoes',\r\n    category: Category.Shoes,\r\n    searchKeyWords: ['Cowboy Bebop', 'Shoes', 'Anime']\r\n};\r\n\r\n\r\n\r\n\r\n\r\n\r\nconsole.log(blackPantherTShirt)\r\nconsole.log(ironManHat)\r\nconsole.log(cowboyBebopShoes)\r\n\r\n"
             ],
-            "outputs": []
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "{",
+                                "  numericId: 1,",
+                                "  price: 20.99,",
+                                "  description: 'Black Panther T-Shirt',",
+                                "  category: 'Shirts',",
+                                "  searchKeyWords: [ 'Black Panther', 'T-Shirt', 'Marvel' ]",
+                                "}",
+                                "{",
+                                "  numericId: 2,",
+                                "  price: 15.99,",
+                                "  description: 'Iron Man Hat',",
+                                "  category: 'Hats',",
+                                "  searchKeyWords: [ 'Iron Man', 'Hat', 'Marvel' ]",
+                                "}",
+                                "{",
+                                "  numericId: 3,",
+                                "  price: 50.99,",
+                                "  description: 'Cowboy Bebop Shoes',",
+                                "  category: 'Shoes',",
+                                "  searchKeyWords: [ 'Cowboy Bebop', 'Shoes', 'Anime' ]",
+                                "}",
+                                "",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
         }
     ]
 }
