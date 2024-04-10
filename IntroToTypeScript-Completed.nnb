@@ -2372,7 +2372,7 @@
         {
             "language": "typescript",
             "source": [
-                "//Given\r\ntype Fruit={\r\n    color:string,\r\n    shape:string\r\n}\r\n\r\nlet apple:Fruit={color:\"red\", shape:\"sphere\"}\r\nlet eaten:Fruit=null\r\n\r\n//Answer"
+                "//Given\r\ntype Fruit={\r\n    color:string,\r\n    shape:string\r\n}\r\n\r\nlet apple:Fruit={color:\"red\", shape:\"sphere\"}\r\nlet eaten:Fruit | null =null\r\n\r\n//Answer\r\nfunction inspectFruit(fruit: Fruit | null): void {\r\n    if (fruit) {\r\n        console.log(fruit.color);\r\n    } else {\r\n        console.log('You ate my fruit already');\r\n    }\r\n}\r\n\r\ninspectFruit(apple); \r\ninspectFruit(eaten); "
             ],
             "outputs": [
                 {
@@ -2380,6 +2380,8 @@
                         {
                             "mime": "application/vnd.code.notebook.stdout",
                             "value": [
+                                "red",
+                                "You ate my fruit already",
                                 "",
                                 ""
                             ]
