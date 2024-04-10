@@ -2380,8 +2380,7 @@
                         {
                             "mime": "application/vnd.code.notebook.stdout",
                             "value": [
-                                "red",
-                                "You ate my fruit already",
+                                "",
                                 ""
                             ]
                         }
@@ -2406,9 +2405,27 @@
         {
             "language": "typescript",
             "source": [
-                "//Given \r\ntype Book={\r\n    isbn:string,\r\n    title:string,\r\n    author:string\r\n}\r\n\r\ntype DigitalBook={\r\n    fileType:string,\r\n}\r\n\r\n//Answer\r\n"
+                "//Given \r\ntype Book={\r\n    isbn:string,\r\n    title:string,\r\n    author:string\r\n}\r\n\r\ntype DigitalBook={\r\n    fileType:string,\r\n}\r\n\r\ntype Ebook = Book & DigitalBook;\r\n\r\nlet dragonFiction: Ebook = {\r\n    isbn: '111-222-333',\r\n    title: 'Dungeons and Dragons',\r\n    author: 'Sum Gui',\r\n    fileType: 'pdf'\r\n};\r\n\r\n//Answer\r\nconsole.log(dragonFiction)"
             ],
-            "outputs": []
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "{",
+                                "  isbn: '111-222-333',",
+                                "  title: 'Dungeons and Dragons',",
+                                "  author: 'Sum Gui',",
+                                "  fileType: 'pdf'",
+                                "}",
+                                "",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
         },
         {
             "language": "markdown",
